@@ -3,7 +3,7 @@ package OOP;
 public class Student {
 
     /**
-     * Student Class
+     * The {@code Student} class represents a student with attributes such as name, student ID, and grades.
      */
 
     // attribute define
