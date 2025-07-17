@@ -9,6 +9,5 @@ public class Main {
 
         System.out.printf("Hello World, %d, %d, %.3f", a, b, c);
 
-
     }
 }
