@@ -1,12 +1,15 @@
 package OOP;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Car {
 
     // attribute define
-    private String model;
-    private int year;
-    private double base_price;
-    private String color;
+    public String model;
+    public int year;
+    public double base_price;
+    public String color;
 
     // constructor define
     public Car() {
@@ -22,29 +25,45 @@ public class Car {
 
     // method define
 
-    public void setBasePrice(double price) {
-        this.base_price = price;
-    }
+    public double getColorRate() {
 
-    public void setYear(int year) {
-        this.year = year;
-    }
+        double colorRate = 0.0;
 
-    public void setModel(String model) {
-        this.model = model;
+        if (this.color.toLowerCase().equals("white")) {
+            colorRate += 0.10;
+        } else if (this.color.toLowerCase().equals("silver")) {
+            colorRate += 0.15;
+        } else if (this.color.toLowerCase().equals("blue")) {
+            colorRate += 0.20;
+        } else if (this.color.toLowerCase().equals("red")) {
+            colorRate += 0.25;
+        }
+
+        return colorRate;
     }
 
     public double getFinalPrice(double tax_rate) {
-        return (1 + tax_rate) * this.base_price;
+        return (1 + tax_rate) * this.base_price * (1 + getColorRate());
     }
 
     public static void main(String[] args) {
 
+        Scanner scnr = new Scanner(System.in);
         Car myCar = new Car(); // create an instance
 
-        myCar.setModel("Corolla");
-        myCar.setYear(2025);
-        myCar.setBasePrice(24000);
+        System.out.println("Enter car details:");
+
+        System.out.print("Model: ");
+        myCar.model = scnr.nextLine();
+
+        System.out.print("Year: ");
+        myCar.year = scnr.nextInt();
+
+        System.out.print("Color: ");
+        myCar.color = scnr.next();
+
+        System.out.print("Base Price: ");
+        myCar.base_price = scnr.nextDouble();
 
         System.out.printf("The final price for the car: $%.2f%n", myCar.getFinalPrice(0.0825));
 
