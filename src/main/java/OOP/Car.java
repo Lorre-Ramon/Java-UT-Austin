@@ -1,7 +1,5 @@
 package OOP;
 
-import java.sql.SQLOutput;
-
 public class Car {
 
     // attribute define
