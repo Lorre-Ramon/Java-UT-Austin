@@ -2,6 +2,10 @@ package OOP;
 
 public class Student {
 
+    /**
+     * Student Class
+     */
+
     // attribute define
     public String name;
     public int studentId;
@@ -13,6 +17,10 @@ public class Student {
 
     // methods define
 
+    /**
+     * Override the toString() method to return a formatted string representation of the Student object.
+     * @return A formatted string containing the student's name, ID, grades, average, and letter grade.
+     */
     public String toString() {
 
         return String.format(
@@ -23,6 +31,10 @@ public class Student {
         );
     }
 
+    /**
+     * Calculate the average of the grades.
+     * @return The average of the grades.
+     */
     public double calculateAverage() {
 
         double sum = -1.0;
@@ -33,6 +45,11 @@ public class Student {
         return sum / this.grades.length;
 
     }
+
+    /**
+     * Determine the letter grade based on the average.
+     * @return The letter grade ('A', 'B', 'C', 'D', or 'F').
+     */
 
     public char getLetterGrade() {
         // return the letter grade based on the average
@@ -53,19 +70,10 @@ public class Student {
 
     }
 
-    public void displayStuudentInfo(double avg, char letterGrade) {
-//        System.out.println("Student Name: " + this.name);
-//        System.out.println("Student ID: " + this.studentId);
-//
-//        System.out.print("Grades: ");
-//
-//        for (double grade : this.grades) {
-//            System.out.print(grade + " ");
-//        }
-//        System.out.println();
-//        System.out.printf("Average: %.2f%n", avg);
-//        System.out.printf("Letter Grade: %c%n", letterGrade);
-
+    /**
+     * Display the student's information, including name, ID, grades, average, and letter grade.
+     */
+    public void displayStuudentInfo() {
         System.out.println(this.toString());
     }
 
@@ -76,7 +84,7 @@ public class Student {
         student1.studentId = 10010;
         student1.grades = new double[]{85.5, 90.0, 78.5};
 
-        student1.displayStuudentInfo(student1.calculateAverage(), student1.getLetterGrade());
+        student1.displayStuudentInfo();
         System.out.println();
 
         Student student2 = new Student();
@@ -84,7 +92,7 @@ public class Student {
         student2.studentId = 10086;
         student2.grades = new double[]{65.5, 70.0, 58.5};
 
-        student2.displayStuudentInfo(student2.calculateAverage(), student2.getLetterGrade());
+        student2.displayStuudentInfo();
         System.out.println();
 
     }
