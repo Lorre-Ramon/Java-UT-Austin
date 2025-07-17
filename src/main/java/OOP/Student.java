@@ -15,7 +15,6 @@ public class Student {
 
     public String toString() {
 
-        // TODO: display student info
         return String.format(
                 "Student Name: %s%nStudent ID: %d%nGrades: %.2f %.2f %.2f%nAverage: %.2f%nLetter Grade: %c",
                 this.name, this.studentId,
