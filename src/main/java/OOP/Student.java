@@ -47,6 +47,27 @@ public class Student {
     }
 
     /**
+     * Change the grades of the student.
+     * @param newGrades An array of new grades to replace the current grades.
+     */
+    public void changeGrade(double[] newGrades) {
+        this.grades = newGrades;
+    }
+
+    /**
+     * Change a specific grade of the student at the given index.
+     * @param newGrade The new grade to set.
+     * @param index The index of the grade to change (0, 1, or 2).
+     */
+    public void changeGrade(double newGrade, int index) {
+        try {
+            this.grades[index] = newGrade;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Index out of bounds. Please provide a valid index (0, 1, or 2).");
+        }
+    }
+
+    /**
      * Determine the letter grade based on the average.
      * @return The letter grade ('A', 'B', 'C', 'D', or 'F').
      */
@@ -56,7 +77,7 @@ public class Student {
 
         double gradeAvg = calculateAverage();
 
-        if (gradeAvg >= 90) {
+        if (gradeAvg >= 90 && gradeAvg <= 100) {
             return 'A';
         } else if (gradeAvg >= 80 && gradeAvg < 90) {
             return 'B';
