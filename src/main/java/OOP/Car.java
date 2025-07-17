@@ -25,6 +25,11 @@ public class Car {
 
     // method define
 
+    public String toString() {
+        return "I'm a " + this.model + ", year " + this.year + ", color of " + this.color + ", base price of "
+ +this.base_price;
+    }
+
     public double getColorRate() {
 
         double colorRate = 0.0;
@@ -65,7 +70,9 @@ public class Car {
         System.out.print("Base Price: ");
         myCar.base_price = scnr.nextDouble();
 
-        System.out.printf("The final price for the car: $%.2f%n", myCar.getFinalPrice(0.0825));
+        System.out.println(myCar);
+
+        System.out.printf("The final price for the car: $%.2f%n", myCar.getFinalPrice(0.08));
 
     }
 }
