@@ -53,6 +53,7 @@ public class Main {
 
         System.out.println("How many espresso shots would you like? (1-3): ");
         userCoffee.setShots(scnr.nextInt());
+        scnr.nextLine();
 
         while (true) {
             System.out.println("Would you like a condiment (milk/sugar/n)? ");
