@@ -26,7 +26,7 @@ public class PartTimeEmployee implements Employee{
     }
 
     public String getDetails() {
-        return String.format("Part-Time - %s | ID: %s | Pay: $%.1f",
+        return String.format("Processor-Time - %s | ID: %s | Pay: $%.1f",
                 this.name, this.id, this.calculatePay());
     }
 
