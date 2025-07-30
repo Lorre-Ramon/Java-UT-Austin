@@ -2,6 +2,7 @@ package DataStructure.Assignment_12;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -38,7 +39,7 @@ public class ReadTopN {
         }
 
         List<Integer> topNList = new ArrayList<>(topN);
-        topNList.sort((a,b) -> Integer.compare(b, a));
+        topNList.sort((a,b) -> Integer.compare(b, a)); // O(n log n) sort in descending order
         for (int i=0; i<topN.size(); i++) {
             System.out.println("Top " + (i+1) + ": " + topNList.get(i) );
         }

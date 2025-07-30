@@ -36,3 +36,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/src/main/java/DataStructure/Assignment_13/SORTED-FILE-RESULT.txt
+/src/main/java/DataStructure/Assignment_13/Taxi Data Sorted Small Assignment 13.csv
