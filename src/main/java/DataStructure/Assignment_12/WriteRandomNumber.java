@@ -13,7 +13,7 @@ public class WriteRandomNumber {
 
             int i = 0;
             while (i<100) {
-                int randomNumberInt = random.nextInt();
+                int randomNumberInt = random.nextInt(2000);
                 writer.write(String.valueOf(randomNumberInt));
                 writer.newLine();
                 i++;
