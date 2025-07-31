@@ -34,7 +34,9 @@ public class Main {
             for (TaxiInfo taxiInfo : taxiInfoList) {
                 writer.write(taxiInfo.getLine());
                 writer.newLine();
+                writer.flush(); // write to disk immediately
             }
+            writer.close();
             System.out.println("Successfully wrote to " + outputFilePath);
         } catch (IOException e) {
             System.err.println("Error writing to the file: " + e.getMessage());
